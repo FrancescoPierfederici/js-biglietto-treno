@@ -10,10 +10,10 @@ var prezzoBiglietto = kmPercorsi * prezzoBigliettoaKm;
 
 
 if (etaPasseggero < 18){
-    document.writeln("Questo è il prezzo del biglietto per i minorenni:" + ((prezzoBiglietto *20) / 100).toFixed(2) +" Euro");
+    document.writeln("Questo è il prezzo del biglietto per i minorenni:" + ( prezzoBiglietto -(prezzoBiglietto *20) / 100).toFixed(2) +" Euro");
     
 }else if (etaPasseggero >= 65){
-    document.writeln("Questo è il prezzo del biglietto per gli over 65:" + ((prezzoBiglietto *40) / 100).toFixed(2) +" Euro");
+    document.writeln("Questo è il prezzo del biglietto per gli over 65:" + (prezzoBiglietto - (prezzoBiglietto *40) / 100).toFixed(2) +" Euro");
 
 
 }else if (Number.isNaN(kmPercorsi) || Number.isNaN(etaPasseggero)) {
